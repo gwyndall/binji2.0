@@ -9,10 +9,19 @@ const NavBar = () => {
   return (
     <div>
       {!isAuthenticated && (
-        <button onClick={() => loginWithRedirect({})}>Log in</button>
+        <button
+          className="ui teal button"
+          onClick={() => loginWithRedirect({})}
+        >
+          Log in
+        </button>
       )}
 
-      {isAuthenticated && <button onClick={() => logout()}>Log out</button>}
+      {isAuthenticated && (
+        <button className="ui red button" onClick={() => logout()}>
+          Log out
+        </button>
+      )}
     </div>
   );
 };
